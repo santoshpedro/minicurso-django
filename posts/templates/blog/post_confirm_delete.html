@@ -1,0 +1,8 @@
+<h1>Confirmar exclusão</h1>
+<p>Tem certeza que deseja excluir o post "{{ post.title }}"?</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Sim, excluir</button>
+</form>
+<a href="{% url 'post_list' %}">Cancelar</a>
